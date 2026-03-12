@@ -1,0 +1,227 @@
+/* ============================================================
+   RECIPES PAGE — Cook with Us
+   ============================================================ */
+
+.rpage {
+  padding-top: 70px;
+}
+
+/* ── Page Hero ── */
+.rpage__hero {
+  position: relative;
+  padding: 72px 24px 56px;
+  overflow: hidden;
+}
+
+.rpage__hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--text-dark) 0%,
+    #3D1A08 55%,
+    var(--primary-dark) 100%
+  );
+  z-index: 0;
+}
+
+.rpage__hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rpage__hero-inner .section-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Search Bar ── */
+.rpage__search {
+  position: relative;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.rpage__search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+}
+
+.rpage__search-input {
+  width: 100%;
+  padding: 15px 20px 15px 50px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.11);
+  color: white;
+  font-size: 15px;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.rpage__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.rpage__search-input:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+  outline: none;
+}
+
+/* ── Category Tabs ── */
+.rpage__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 32px 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.rpage__tab {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--light-gray);
+  color: var(--text-body);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.rpage__tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.rpage__tab--active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ── Filter Controls ── */
+.rpage__controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0 4px;
+}
+
+.rpage__control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rpage__control-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.rpage__control-group select {
+  padding: 8px 30px 8px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-dark);
+  background: white;
+  cursor: pointer;
+  transition: var(--transition);
+  appearance: none;
+  font-family: var(--font-body);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C4A38' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.rpage__control-group select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* ── Results Info ── */
+.rpage__info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.rpage__clear {
+  background: rgba(232, 71, 42, 0.09);
+  border: none;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* ── Recipes Grid ── */
+.rpage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+/* ── Empty State ── */
+.rpage__empty {
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.rpage__empty-icon {
+  font-size: 56px;
+  margin-bottom: 4px;
+}
+
+.rpage__empty h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text-dark);
+}
+
+.rpage__empty p {
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .rpage__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .rpage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rpage__controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

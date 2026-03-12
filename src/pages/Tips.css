@@ -1,0 +1,307 @@
+/* ============================================================
+   TIPS PAGE — Cook with Us
+   ============================================================ */
+
+.tpage {
+  padding-top: 70px;
+}
+
+/* ── Page Hero ── */
+.tpage__hero {
+  position: relative;
+  padding: 72px 24px 60px;
+  overflow: hidden;
+}
+
+.tpage__hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FAF0E8, #FDDCC8, #FAEDDA);
+  z-index: 0;
+}
+
+.tpage__hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tpage__hero-title {
+  font-size: clamp(36px, 5vw, 64px);
+}
+
+.tpage__hero-sub {
+  font-size: 17px;
+  color: var(--text-body);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ── Quick Tips Banner ── */
+.tpage__banner {
+  background: var(--text-dark);
+  padding: 22px 24px;
+}
+
+.tpage__banner-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tpage__banner-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 20px;
+}
+
+.tpage__banner-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Category Pills ── */
+.tpage__cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 36px 0 28px;
+}
+
+.tpage__cat {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--light-gray);
+  color: var(--text-body);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.tpage__cat:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tpage__cat--active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ── Tips Cards Grid ── */
+.tpage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 72px;
+}
+
+/* ── Tip Card ── */
+.tcard {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.tcard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.tcard--open {
+  border-color: var(--primary);
+}
+
+/* ── Tip Card Header ── */
+.tcard__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tcard__icon-wrap {
+  width: 50px;
+  height: 50px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.tcard__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.tcard__time {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+/* ── Tip Card Content ── */
+.tcard__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.tcard__summary {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── Expanded Detail ── */
+.tcard__detail {
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeInUp 0.35s ease both;
+}
+
+.tcard__detail p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── Detail Author ── */
+.tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.tcard__author img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ── Toggle Button ── */
+.tcard__toggle {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: auto;
+  text-align: left;
+  font-family: var(--font-body);
+  transition: color 0.2s ease;
+}
+
+.tcard__toggle:hover {
+  color: var(--primary-dark);
+}
+
+/* ── Pro Section ── */
+.tpage__pro {
+  padding-bottom: 80px;
+}
+
+.tpage__pro-hd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+
+.tpage__pro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* ── Pro Card ── */
+.pro-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  transition: var(--transition);
+}
+
+.pro-card:hover {
+  transform: translateY(-4px);
+  background: white;
+  box-shadow: var(--shadow-md);
+}
+
+.pro-card__icon {
+  font-size: 34px;
+}
+
+.pro-card__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.pro-card__desc {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .tpage__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tpage__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tpage__pro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tpage__banner-grid {
+    justify-content: flex-start;
+  }
+}
