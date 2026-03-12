@@ -1,3 +1,6 @@
+<img width="1332" height="634" alt="image" src="https://github.com/user-attachments/assets/6694c49c-1264-453c-8527-7f9e83a8dacd" />
+
+
 **Cook with Us**
  A professional community recipe sharing platform built with React & Vite. <br>
  Browse, filter, and explore 15+ dishes from home cooks across 45 countries.
