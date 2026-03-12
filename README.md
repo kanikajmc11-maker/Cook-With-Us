@@ -68,17 +68,3 @@ npm install && npm install react-router-dom
 
  6. Start the development server
 npm run dev
-```
-
-Open in browser → `http://localhost:5173`
-
----
-
-**Pages & Routes**
-
- → Home <br>
-recipes → Recipes <br>
-tips → Tips & Tricks <br>
-community → Community
-
-*© 2025 Cook with Us. All rights reserved.*
