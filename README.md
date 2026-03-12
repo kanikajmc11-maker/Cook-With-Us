@@ -1,6 +1,6 @@
 **Cook with Us**
-> A professional community recipe sharing platform built with React & Vite. <br>
-> Browse, filter, and explore 15+ dishes from home cooks across 45 countries.
+ A professional community recipe sharing platform built with React & Vite. <br>
+ Browse, filter, and explore 15+ dishes from home cooks across 45 countries.
 
 
 **About the Project**
